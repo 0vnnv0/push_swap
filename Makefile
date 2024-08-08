@@ -6,7 +6,7 @@
 #    By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/04 15:29:49 by anschmit          #+#    #+#              #
-#    Updated: 2024/08/07 13:06:29 by anschmit         ###   ########.fr        #
+#    Updated: 2024/08/08 15:50:36 by anschmit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I/home/anschmit/done/libft/includes
 
-SRCS = main.c push.c swap.c
+SRCS = main.c push.c swap.c rotate.c reverse_rotate.c
 
 OBJS = $(SRCS:%.c=%.o)
 

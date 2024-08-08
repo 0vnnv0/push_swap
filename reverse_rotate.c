@@ -1,53 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/04 17:06:09 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/08 16:52:19 by anschmit         ###   ########.fr       */
+/*   Created: 2024/08/08 15:11:51 by anschmit          #+#    #+#             */
+/*   Updated: 2024/08/08 17:00:11 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_a(t_stack *a_stack)
+void	rr_a(t_stack *a_stack)
 {
-	int	temp;
+	t_node	*current;
+	t_node	*previous;
+
+	previous = NULL;
 	if (a_stack == NULL || a_stack->top == NULL || a_stack->top->next == NULL)
 		return ;
-	temp = a_stack->top->data;
-	a_stack->top->data = a_stack->top->next->data;
-	a_stack->top->next->data = temp;
-}
-
-void	swap_b(t_stack *b_stack)
-{
-	int	temp;
-
-	if (b_stack == NULL || b_stack->top == NULL || b_stack->top->next == NULL)
-		return ;
-	temp = b_stack->top->data;
-	b_stack->top->data = b_stack->top->next->data;
-	b_stack->top->next->data = temp;
-}
-
-void swap_both(t_stack *a_stack, t_stack *b_stack)
-{
-	swap_a(a_stack);
-	swap_b(b_stack);
-}
-
-void print_stack(t_stack *stack)
-{
-	t_node *current;
-
-	current = stack->top;
-	while (current != NULL)
+	current = a_stack->top;
+	while (current->next != NULL)
 	{
-		ft_printf("%d ", current->data);
+		previous = current;
 		current = current->next;
 	}
-	ft_printf("\n");
+	previous->next = NULL;
+	current->next = a_stack->top;
+	a_stack->top = current;
+}
+
+void	rr_a(t_stack *b_stack)
+{
+	t_node *current;
+	t_node *previous;
+
+	previous = NULL;
+	if (b_stack == NULL || b_stack->top == NULL || b_stack->top->next == NULL)
+		return ;
+	current = b_stack->top;
+	while (current->next != NULL)
+	{
+		previous = current;
+		current = current->next;
+	}
+	previous->next = NULL;
+	current->next = b_stack->top;
+	b_stack->top = current;
+}
+
+void	rrr(t_stack *a_stack, t_stack *b_stack)
+{
+	rr_a(a_stack);
+	rr_b(b_stack);
 }
