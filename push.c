@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:08:18 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/07 17:18:25 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:06:54 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	push_b(t_stack *a_stack, t_stack *b_stack)
 		return ;
 	temp = a_stack->top;
 	a_stack->top->next = a_stack->top;
-	temp->next = a_stack->top;
-	a_stack->top = temp;
+	temp->next = b_stack->top;
+	b_stack->top = temp;
 }
 
 void	push_print(t_stack *a_stack, int value)

@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:06:09 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/08 16:52:19 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:47:56 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	swap_a(t_stack *a_stack)
 {
 	int	temp;
+
 	if (a_stack == NULL || a_stack->top == NULL || a_stack->top->next == NULL)
 		return ;
 	temp = a_stack->top->data;
@@ -33,15 +34,15 @@ void	swap_b(t_stack *b_stack)
 	b_stack->top->next->data = temp;
 }
 
-void swap_both(t_stack *a_stack, t_stack *b_stack)
+void	swap_both(t_stack *a_stack, t_stack *b_stack)
 {
 	swap_a(a_stack);
 	swap_b(b_stack);
 }
 
-void print_stack(t_stack *stack)
+void	print_stack(t_stack *stack)
 {
-	t_node *current;
+	t_node	*current;
 
 	current = stack->top;
 	while (current != NULL)

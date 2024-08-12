@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 15:11:51 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/08 17:00:11 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:11:19 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	rr_a(t_stack *a_stack)
 	a_stack->top = current;
 }
 
-void	rr_a(t_stack *b_stack)
+void	rr_b(t_stack *b_stack)
 {
 	t_node *current;
 	t_node *previous;
