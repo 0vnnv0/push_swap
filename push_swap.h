@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 15:42:16 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/12 17:21:35 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:14:17 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,20 @@
 typedef struct s_node
 {
 	int				data;
+	int				index;
 	struct s_node	*next;
 }				t_node;
 
 typedef struct s_stack 
 {
 	t_node	*top;
-} 				t_stack;
-
+}				t_stack;
 
 void	swap_a(t_stack *a_stack);
 void	swap_b(t_stack *b_stack);
 
 void	push_print(t_stack *a_stack, int value);
-void 	print_stack(t_stack *stack);
+void	print_stack(t_stack *stack);
 
 void	rotate_a(t_stack *a_stack);
 void	rotate_b(t_stack *b_stack);
@@ -53,7 +53,14 @@ void	ft_init_stack(t_stack *a_stack, int argc, char **argv);
 void	free_stack(t_stack *a_stack);
 t_node	*ft_newnode(int data);
 void	ft_stackadd_back(t_stack *stack, t_node *new_node);
-void	ft_sort_stack(t_stack *a_stack/*, t_stack *b_stack*/);
+void	ft_sort_stack(t_stack *a_stack, t_stack *b_stack);
 int		ft_stacksize(t_stack *a_stack);
+void	ft_sort_3(t_stack *a_stack);
+void	ft_sort_4(t_stack *a_stack, t_stack *b_stack);
+void	ft_sort_5(t_stack *a_stack, t_stack *b_stack);
+int		find_min_position(t_stack *a_stack);
+void	ft_radix(t_stack *a_stack, t_stack *b_stack, int size);
+void	set_index(t_stack *a_stack);
+int		get_max_bits(int size);
 
 #endif

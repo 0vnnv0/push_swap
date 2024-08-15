@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:06:09 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/12 17:47:56 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/13 15:15:17 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	swap_a(t_stack *a_stack)
 	temp = a_stack->top->data;
 	a_stack->top->data = a_stack->top->next->data;
 	a_stack->top->next->data = temp;
+	write(1, "sa\n", 3);
 }
 
 void	swap_b(t_stack *b_stack)
@@ -32,6 +33,7 @@ void	swap_b(t_stack *b_stack)
 	temp = b_stack->top->data;
 	b_stack->top->data = b_stack->top->next->data;
 	b_stack->top->next->data = temp;
+	write(1, "sb\n", 3);
 }
 
 void	swap_both(t_stack *a_stack, t_stack *b_stack)

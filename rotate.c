@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:56:56 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/12 17:40:29 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/15 13:36:52 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	rotate_a(t_stack *a_stack)
 	while (current->next != NULL)
 		current = current->next;
 	current->next = first;
+	a_stack->top = a_stack->top->next;
 	first->next = NULL;
 	write(1, "ra\n", 3);
 }

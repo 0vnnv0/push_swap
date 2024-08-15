@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:26:01 by anschmit          #+#    #+#             */
-/*   Updated: 2024/08/12 17:35:11 by anschmit         ###   ########.fr       */
+/*   Updated: 2024/08/15 13:33:46 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	free_stack(t_stack *a_stack)
 }
 
 void	ft_init_stack(t_stack *a_stack, int argc, char **argv)
-{	
+{
 	t_node	*new_node;
 	char	**args;
 	int		i;
