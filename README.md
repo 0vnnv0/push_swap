@@ -1,4 +1,5 @@
-# push_swap
+![image](https://github.com/user-attachments/assets/e02c1822-8354-4b91-8adf-c7329b18acf5)
+
 ## 🖥️ Description
 Push_swap is a program written in C that solves the sorting problem for two stacks named a and b. <br/>
 The goal is to sort the numbers in stack a in ascending order using a specific set of operations. <br/>
